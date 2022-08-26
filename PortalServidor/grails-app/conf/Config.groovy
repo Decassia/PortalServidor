@@ -95,11 +95,11 @@ log4j = {
 
 // Validações do LDAP
 
-grails.plugins.springsecurity.ldap.context.managerDn ='uid=replica,ou=People,o=uft,dc=edu,dc=br'
-grails.plugins.springsecurity.ldap.context.managerPassword = 'qHnWGT1ccJyH'
-grails.plugins.springsecurity.ldap.context.server = 'ldap://jaca.uft.edu.br:389'
+grails.plugins.springsecurity.ldap.context.managerDn =''
+grails.plugins.springsecurity.ldap.context.managerPassword = ''
+grails.plugins.springsecurity.ldap.context.server = ''
 grails.plugins.springsecurity.ldap.authorities.ignorePartialResultException = true
-grails.plugins.springsecurity.ldap.search.base = 'o=uft,dc=edu,dc=br'
+grails.plugins.springsecurity.ldap.search.base = ''
 grails.plugins.springsecurity.ldap.search.filter = 'uid={0}'
 grails.plugins.springsecurity.ldap.search.searchSubtree = true
 grails.plugins.springsecurity.ldap.auth.hideUserNotFoundExceptions = false
@@ -114,7 +114,7 @@ grails.plugins.springsecurity.ldap.authorities.retrieveDatabaseRoles = true
 // role-specific LDAP config
 grails.plugins.springsecurity.ldap.useRememberMe = false
 grails.plugins.springsecurity.ldap.authorities.retrieveGroupRoles = false
-grails.plugins.springsecurity.ldap.authorities.groupSearchBase = 'o=uft,dc=edu,dc=br'
+grails.plugins.springsecurity.ldap.authorities.groupSearchBase = ''
 grails.plugins.springsecurity.ldap.authorities.groupSearchFilter = 'uid={0}'
 //ldap.authorities. groupRoleAttribute =
 
@@ -143,10 +143,7 @@ grails.plugins.springsecurity.interceptUrlMap = [
         '/jasper/*': ['ROLE_ADMIN', 'IS_AUTHENTICATED_FULLY'],
         '/cadastroServidor/list': ['ROLE_ADMIN', 'IS_AUTHENTICATED_FULLY'],
         '/cadastrarRemocao/list': ['ROLE_ADMIN', 'IS_AUTHENTICATED_FULLY'],
-       // '/cadastroServidor/list/': ['ROLE_ADMIN', 'IS_AUTHENTICATED_FULLY'],
-        //'/parecerChefia/create/*': ['ROLE_ADMIN', 'IS_AUTHENTICATED_FULLY'],
-       // '/parecerRH/create': ['ROLE_ADMIN', 'IS_AUTHENTICATED_FULLY'],
-       // '/parecerDiretor/create': ['ROLE_ADMIN','IS_AUTHENTICATED_FULLY'],
+     
         '/**': ['IS_AUTHENTICATED_REMEMBERED']
 
 ]
