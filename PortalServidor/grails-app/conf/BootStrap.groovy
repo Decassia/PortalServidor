@@ -10,7 +10,7 @@ class BootStrap {
         def adminRole = Permissao.findByAuthority('ROLE_ADMIN') ?: new
         Permissao(authority: 'ROLE_ADMIN').save(failOnError: true)
         def adminUser = Usuario.findByUsername('Celia Mitie Kondo') ?: new Usuario(
-                username: 'Celia Mitie Kondo',
+                username: 'Celia Mitie Kondo',#testando o usuario
                 password:
                         springSecurityService.encodePassword('Celia Mitie Kondo'),
                 permissao: adminRole,
